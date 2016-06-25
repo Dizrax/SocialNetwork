@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">   
+	 
+		<title>Редактирование профиля</title>
+	 
+		<link rel="stylesheet" type="text/css" href="${request.static_url('socialnetwork:static/style.css') }" />
+	 	<script type="text/javascript" src="${request.static_url('socialnetwork:static/jquery.js') }"></script>
+	 	<script>
+	    		$(function(){
+				$("#includedmenu").load("${request.static_url('socialnetwork:static/nav1.html') }");
+			});
+		</script>
+	</head>
+	<body>
+	 
+		<header>
+			<figure>
+				<a href="#"><img src="${request.static_url('socialnetwork:static/logo.png') }"></a>
+			</figure>       
+		</header>
+	 
+		<nav>
+			<div id="includedmenu"></div>    
+		</nav>
+	 
+		<main>
+			<article>
+				<h2>Редактирование профиля</h2>
+				<p><img src="${avatar}"></p>
+				<form method="post" action="/edit" enctype="multipart/form-data" class="form_edit_profile">
+					<p><input type="file" class="big_button" value="Select file" name="myimg" size="100"></p>
+					<p>
+						<label class="lable_edit_profile">Имя</label>      
+						<input type="text" name="name" value="${name}"/>
+					</p>
+					<p>
+						<label class="lable_edit_profile">Фамилия</label>   
+						<input type="text" name="lastname" value="${lastname}"/>
+					</p>
+					<p>
+						<label class="lable_edit_profile">Город</label>    
+						<input type="text" name="city" value="${city}"/>
+					</p>
+					<p>
+						<label class="lable_edit_profile">Возраст</label>   
+						<input type="text" name="age" value="${age}"/>
+					</p>	
+					<p><div><input type="submit" name="submit" value="Entry" class="big_button" /></div></p>	
+				</form>
+			</article>
+
+			<menu>
+
+			</menu>
+		 
+		 </main>
+	 
+		<footer>	 
+		       <address>
+			  Авторы
+		       </address>	 
+		</footer>	 
+	</body>
+</html>

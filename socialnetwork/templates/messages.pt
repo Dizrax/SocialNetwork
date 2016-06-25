@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+	    	<meta charset="utf-8">   
+	 
+		<title>Сообщения</title>
+	 
+		<link rel="stylesheet" type="text/css" href="${request.static_url('socialnetwork:static/style.css') }" />
+	 	<script type="text/javascript" src="${request.static_url('socialnetwork:static/jquery.js') }"></script>
+	 	<script>
+	    		$(function(){
+				$("#includedmenu").load("${request.static_url('socialnetwork:static/nav1.html') }");
+			});
+		</script>
+	</head>
+	<body>
+	 
+	<header>
+		<figure>
+			<a href="#"><img src="${request.static_url('socialnetwork:static/logo.png') }"></a>
+		</figure>       
+	</header>
+	 
+	<nav>
+		<div id="includedmenu"></div>    
+	</nav>
+	 
+		<main>
+			<article>
+				<h2>Сообщения</h2>
+				<p tal:repeat="item lines"><label>${item}</label></p>				
+				<form accept-charset="unicode" method="post" action="/writemessage?id=${id}" enctype="multipart/form-data" class="form_send_msg">
+					<input type="text" name="text" id="input_send_msg">
+					<input type="submit" name="submit" class="big_button" id="button_send_msg" value="Отправить"/>
+				</form>
+			</article>
+		</main>
+	 
+		<footer>		 
+		       <address>
+			  Авторы
+		       </address>		 
+		</footer>
+	 
+	</body>
+</html>

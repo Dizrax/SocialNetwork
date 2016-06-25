@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+	    	<meta charset="utf-8">  
+	 
+		<title>Мой профиль</title>
+	 
+		<link rel="stylesheet" type="text/css" href="${request.static_url('socialnetwork:static/style.css') }" />
+	 	<script type="text/javascript" src="${request.static_url('socialnetwork:static/jquery.js') }"></script>
+	 	<script>
+	    		$(function(){
+				$("#includedmenu").load("${request.static_url('socialnetwork:static/nav1.html') }");
+			});
+		</script>
+	</head>
+	<body>
+	 
+		<header>
+			<figure>
+				<a href="#"><img src="${request.static_url('socialnetwork:static/logo.png') }"></a>
+			</figure>       
+		</header>
+		 
+		<nav >
+			<div id="includedmenu"></div>    
+		</nav>
+		 
+		<main>		 
+			<article>        
+				<table cellspacing="10" cellpadding="0" width="100%" border="0">
+					<tbody>
+						<tr>
+							<td valign="top" width="70%"  >	
+								<h2>Профиль
+									<a href="/editProfile" class="edit_profile">Ред.</a>
+								</h2>
+								<p><img src="${avatar}" class="profile_photo"></p>
+								<p>Имя <label>${name}</label></p>
+								<p>Фамилия <label>${lastname}</label></p>
+								<p>Город <label>${city}</label></p>
+								<p>Возраст <label>${age}</label></p>
+							</td>
+							<td valign="top" width="30%">
+								
+								<p>
+								<a href="/makefriend"> 
+									<button style="visibility:${visibility[0]}" class="big_button">Добавить в друзья</button>
+								</a>
+								</p>							
+								
+								<p>
+								<a href="/removefriend" >
+									<button style="visibility:${visibility[1]}" class="big_button">Убрать из друзей</button>
+								</a>
+								</p>
+								
+								<p>
+								<a href="/friendphoto" >
+								<button style="visibility:${visibility[2]}" class="big_button">Посмотреть фотографии</button>
+								</a>
+								</p>
+
+								<p>
+								<a href="/message" >
+								<p><button style="visibility:${visibility[3]}" class="big_button">Написать сообщение</button></p>
+								</a>
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>        
+			</article>
+
+			<menu>
+
+			</menu>		 
+		</main>
+		 
+		<footer>		 
+		       <address>
+				Авторы
+		       </address>
+		</footer>
+	 
+	</body>
+</html>

@@ -1,0 +1,253 @@
+*, *:before, *:after {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+.form_find_friend{
+	
+	background: none;
+}
+
+.form_send_msg{
+	width: 400px;
+	height: 70px;
+	bottom: 70px;
+	position: fixed;
+}
+/*.form_send_msg input{
+	width: 60%;
+	float: left;
+}
+
+.input_send_msg{
+	float: left;
+}
+.form_send_msg button{
+	width: 35%;
+	float: left;
+}*/
+#input_send_msg{
+	width: 250px;
+}
+#button_send_msg{
+	width: 100px;
+	float: right;
+}
+
+.small_photo{
+	width: 50px;
+	height: 50px;
+}
+
+.profile_photo{
+	width: 210px;
+	height: 240px;
+}
+
+div.warning{
+	background-color: #EF9398;
+	border: 1px solid #DF013A;
+	width: 350px;
+	height: 40px;
+	line-height: 35px;
+}
+
+.click {width: 100px; cursor:pointer; display:inline;}
+
+.click:focus {width: auto; z-index:100;}
+
+A {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+    outline: none; /* Убираем границу вокруг ссылок  */
+   }
+A:active { text-decoration: none; }
+A:visited { text-decoration: none; }
+li {
+ list-style-type: none; /* Убираем маркеры */
+}
+
+.big_button{
+    background:#E47311;
+    cursor:pointer;
+    padding: 10px 10px;
+    color: #eee;
+    font-size: 16px;
+}
+
+.first_column{
+	float: left;
+	width: 30%;
+}
+
+.exit{
+    float: right;
+}
+
+.add_friend{
+	float: right;
+	background:#E47311;/*rgb(228, 115, 17);*/
+    cursor:pointer;
+    padding: 10px 10px;
+    color: #eee;
+    font-size: 16px;
+}
+
+.form_edit_profile{
+	background: none;
+}
+
+.lable_edit_profile{
+	background: none;
+	color: #eee;
+}
+
+input{
+    color: #E47311;
+}
+
+body { 
+    background-color: #FFFFFF;
+    font: 16px/1.42857 "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin:0;
+    background-color: #E47311;
+    height: auto;	
+}
+
+header {
+    background-color: #FFFFFF;
+    color: #fff;
+    height: 120px;
+    padding: 10px 50px;
+}
+
+form{
+    opacity: 1; /* Полупрозрачный фон */
+        background-color:  #eee;
+        color: #E47311;
+        padding: 10px 10px;
+        width: 250px;
+}
+
+form label{
+    width: 40%;
+    color: #E47311;
+    background-color: #eee;
+    float: left;
+    font-style: normal;
+}
+form input{
+    width: 60%;
+}
+
+figure {
+    float:left;
+}
+
+label{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.edit_profile{
+    font-size: 12px;
+    color: #eee;
+}
+
+nav {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    height: 56px;
+    width: auto;
+}
+
+nav ul li {
+    float:left;
+    margin-right:22px
+}
+
+nav a {
+		opacity: 1; /* Полупрозрачный фон */
+        background-color:  #E47311;/*rgb 228 115 17*/
+        color: #eee;
+        padding: 5px 30px;
+        text-decoration: none;
+        font-weight: bold;
+        /*border-left: 5px solid  #FF7F50;*/
+        display: block;
+        
+      }
+
+main {
+    margin: 0 auto;
+    width: 1170px;
+    display: block;
+}
+article {
+    float: left;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    width: 100%;
+    overflow: hidden;
+    color: #eee;
+	height: auto;
+}
+section {
+    background-color:#eee;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+aside {
+    float: right;
+    padding-left: 15px;
+    width: 25%;
+    display: block;
+    overflow: hidden;
+    position:relative;
+}
+menu {
+    padding: 0;
+    width: 70%;
+    color: #eee;
+}
+footer {
+    background-color: #FFFFFF;
+    clear: both;
+    padding: 10px 1000px;
+    position: fixed; /* Фиксированное положение */
+    left: 0;
+	bottom: 0; /* Левый нижний угол */
+	margin-bottom: 0;
+	font-size: small;
+}
+
+footer small a {
+    color: #111111;
+}
+address{  
+}
+
+.input {
+overflow:hidden;
+width:150px;
+height:70px;
+color:#eee;
+font-family:segoe ui;
+margin-top:10px;
+background: none;
+
+padding:10px;
+}
+ 
+input.file {
+opacity:0;
+filter:alpha(opacity:0);
+font-size:199px;
+cursor:pointer;
+padding:0px;
+margin:0px;
+border:none;
+margin-left:-450px;
+margin-top:-30px;
+}

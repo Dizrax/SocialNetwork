@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">   
+	 
+		<title>Результаты</title>
+	 
+		<link rel="stylesheet" type="text/css" href="${request.static_url('socialnetwork:static/style.css') }" />
+	 	<script type="text/javascript" src="${request.static_url('socialnetwork:static/jquery.js') }"></script>
+	 	<script>
+	    		$(function(){
+				$("#includedmenu").load("${request.static_url('socialnetwork:static/nav1.html') }");
+			});
+		</script>
+	</head>
+	<body>
+	 
+		<header>
+			<figure>
+				<a href="#"><img src="${request.static_url('socialnetwork:static/logo.png') }"></a>
+			</figure>       
+		</header>
+		 
+		<nav>
+			<div id="includedmenu"></div>    
+		</nav>
+		 
+		<main>
+			<article>
+				<h2>Результаты</h2>
+				<table cellspacing="10" cellpadding="0" width="100%" border="0">
+					<tbody>
+						<tr>
+						    	<td valign="top" width="70%"  >	
+								<p><p>				
+								<p tal:repeat="item dictionary">
+									<a href="/profile?id=${item[3]}"><img src="${item[2]}" class="small_photo"></a>     
+									<label>${item[0]}</label>     
+									<label>${item[1]}</label>
+								</p>
+							</td>	
+							<td valign="top" width="30%">
+								<p>Поиск друзей<p>
+								<form class="form_find_friend">
+									<p>
+										<label class="lable_edit_profile">Имя</label>          
+										<input type="text" name="name" placeholder="Введите имя для поиска"/>
+									</p>
+									<p>
+										<label class="lable_edit_profile">Фамилия</label>       
+										<input type="text" name="lastname" placeholder="Введите фамилию для поиска"/>
+									</p>
+									<p>
+										<label class="lable_edit_profile">Город</label>         
+										<input type="text" name="city" placeholder="Введите город для поиска"/>
+									</p>
+									<p>
+										<label class="lable_edit_profile">Возраст</label>       
+										<input type="text" name="age" placeholder="Введите возраст для поиска"/>
+									</p>
+									<p>
+										<input type="submit" value="Найти" class="big_button">
+									</p> 
+								</form>
+							</td>
+						</tr>       
+					</tbody>
+				</table>
+			</article>
+		</main>
+		 
+		<footer>		 
+		       <address>
+			  Авторы
+		       </address>		 
+		</footer>	 
+	</body>
+</html>

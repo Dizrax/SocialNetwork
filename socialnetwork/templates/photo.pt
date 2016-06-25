@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">	   
+	 
+		<title>Фотографии</title>
+	 
+		<link rel="stylesheet" type="text/css" href="${request.static_url('socialnetwork:static/style.css') }" />
+	 	<script type="text/javascript" src="${request.static_url('socialnetwork:static/jquery.js') }"></script>
+	 	<script>
+	    		$(function(){
+				$("#includedmenu").load("${request.static_url('socialnetwork:static/nav1.html') }");
+			});
+		</script>
+	</head>
+	<body>
+	 
+		<header>
+			<figure>
+				<a href="#"><img src="${request.static_url('socialnetwork:static/logo.png') }"></a>
+			</figure>       
+		</header>
+	 
+		<nav>
+			<div id="includedmenu"></div>    
+		</nav>
+		 
+		<main> 
+			<article>        
+				<h2>Фотографии</h2>
+				<table cellspacing="10" cellpadding="0" width="100%" border="0">
+					<tbody>
+						<tr>
+							<td  valign="top" width="80%"  >	
+								<img tal:repeat="item photos" border="0" src="${item}" class="click" tabindex="1"/>    
+							</td>
+							<td style="visibility:${visibility}" valign="top" width="20%">
+								<p>Загрузить фото</p>
+								<form method="post" action="/loadPhoto" enctype="multipart/form-data" class="form_edit_profile">
+									<p><input type="file" class="big_button" value="Select file" name="myimg" size="100"></p>
+									<p><div><input type="submit" name="submit" value="Entry"/></div></p>
+								</form>	
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</article> 
+	 	</main>
+		 
+		<footer> 
+		       <address>
+			  Авторы
+		       </address> 
+		</footer>	 
+	</body>
+</html>

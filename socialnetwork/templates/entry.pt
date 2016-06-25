@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Вход</title>
+
+		<link rel="stylesheet" type="text/css" href="${request.static_url('socialnetwork:static/style.css') }" />
+
+		<script type="text/javascript" src="${request.static_url('socialnetwork:static/jquery.js') }"></script>
+	 	<script>
+	    		$(function(){
+				$("#includedmenu").load("${request.static_url('socialnetwork:static/nav0.html') }");
+			});
+		</script>		 
+	</head>
+
+	<body>	 
+		<header>
+			<figure>
+				<a href="#"><img src="${request.static_url('socialnetwork:static/logo.png') }"></a>
+			</figure>		       
+		</header>
+		 
+		<nav>
+			<div id="includedmenu"></div>			
+		</nav>
+		 
+		<main>		 
+			<article>
+				<center>
+					<p><div style="visibility : ${visibility}" class="warning">${text}</div></p>
+					<form method="post" action="/login">
+						<div><h2>Вход</h2></div>
+						<p><div><label>Логин</label> <input type="text" name="login" /></div></p>
+						<p><div><label>Пароль</label> <input type="password" name="password" /></div></p>
+						<p><div><input name="remember" type="checkbox" value="yes" /> Запомнить</div> </p>
+						<p><div><input type="submit" name="submit" value="Войти" class="big_button" /></div></p>
+					</form>
+				</center>
+			</article>
+		</main>
+		 
+		<footer>		 
+		    <div>Куксовский&nbsp;Вадим</div>
+			<div>Тесленко&nbsp;Наталья</div>	 
+		</footer>		 
+	</body>
+</html>
